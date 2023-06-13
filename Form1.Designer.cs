@@ -43,11 +43,6 @@
             label1 = new Label();
             label2 = new Label();
             trackBarVolume = new TrackBar();
-            lstPlaylist = new ListBox();
-            label3 = new Label();
-            btnAdd = new Button();
-            btnDel = new Button();
-            btnClear = new Button();
             ((System.ComponentModel.ISupportInitialize)trackBar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBarVolume).BeginInit();
             SuspendLayout();
@@ -194,67 +189,12 @@
             trackBarVolume.TickStyle = TickStyle.Both;
             trackBarVolume.Scroll += trackBarVolume_Scroll;
             // 
-            // lstPlaylist
-            // 
-            lstPlaylist.FormattingEnabled = true;
-            lstPlaylist.ItemHeight = 15;
-            lstPlaylist.Location = new Point(369, 251);
-            lstPlaylist.Name = "lstPlaylist";
-            lstPlaylist.Size = new Size(203, 229);
-            lstPlaylist.TabIndex = 12;
-            lstPlaylist.DoubleClick += lstPlaylist_DoubleClick;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(369, 146);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 15);
-            label3.TabIndex = 13;
-            label3.Text = "Плейлист:";
-            // 
-            // btnAdd
-            // 
-            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdd.Location = new Point(368, 164);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(146, 23);
-            btnAdd.TabIndex = 14;
-            btnAdd.Text = "Добавить в плейлист";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
-            // 
-            // btnDel
-            // 
-            btnDel.Location = new Point(368, 193);
-            btnDel.Name = "btnDel";
-            btnDel.Size = new Size(146, 23);
-            btnDel.TabIndex = 15;
-            btnDel.Text = "Удалить из плейлиста";
-            btnDel.UseVisualStyleBackColor = true;
-            btnDel.Click += btnDel_Click;
-            // 
-            // btnClear
-            // 
-            btnClear.Location = new Point(368, 222);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(146, 23);
-            btnClear.TabIndex = 16;
-            btnClear.Text = "Очистить плейлист";
-            btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += btnClear_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
-            ClientSize = new Size(577, 538);
-            Controls.Add(btnClear);
-            Controls.Add(btnDel);
-            Controls.Add(btnAdd);
-            Controls.Add(label3);
-            Controls.Add(lstPlaylist);
+            ClientSize = new Size(586, 363);
             Controls.Add(trackBarVolume);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -294,10 +234,5 @@
         private Label label1;
         private Label label2;
         private TrackBar trackBarVolume;
-        private ListBox lstPlaylist;
-        private Label label3;
-        private Button btnAdd;
-        private Button btnDel;
-        private Button btnClear;
     }
 }

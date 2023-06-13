@@ -14,7 +14,6 @@ namespace Plaer
         private int currentSongIndex;
         private bool isDraggingTrackBar;
         private string lastSelectedFolderPath;
-        private List<string> playlistSongs;
 
         public Form1()
         {
@@ -269,37 +268,6 @@ namespace Plaer
             Settings.Default.Save();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            // Получаем выбранный трек из lstSongs
-            string selectedTrack = lstSongs.SelectedItem as string;
-
-            // Проверяем, что трек выбран
-            if (!string.IsNullOrEmpty(selectedTrack))
-            {
-                // Добавляем трек в lstPlaylist
-                lstPlaylist.Items.Add(selectedTrack);
-            }
-        }
-
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            // Получаем выбранный трек из lstPlaylist
-            string selectedTrack = lstPlaylist.SelectedItem as string;
-
-            // Проверяем, что трек выбран
-            if (!string.IsNullOrEmpty(selectedTrack))
-            {
-                // Удаляем выбранный трек из lstPlaylist
-                lstPlaylist.Items.Remove(selectedTrack);
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            // Очищаем lstPlaylist
-            lstPlaylist.Items.Clear();
-        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -320,10 +288,6 @@ namespace Plaer
             }
 
             Properties.Settings.Default.Save();
-        }
-
-        private void lstPlaylist_DoubleClick(object sender, EventArgs e)
-        {
         }
     }
 }
